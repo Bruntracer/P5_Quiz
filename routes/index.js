@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 
-//const Sequelize = require('sequelize');
-//const sequelize = require("../models/index");
+const Sequelize = require('sequelize');
+const sequelize = require("../models/index");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -15,7 +15,7 @@ router.get('/credits', function(req, res, next) {
     res.render('credits', { title:'Quiz', name: 'Bruno Gonzalez Lopez' });
 });
 
-/*
+
 router.get('/quizzes', function(req, res, next) {
     sequelize.models.quiz.findAll().
     then( quizzes => {
@@ -28,6 +28,6 @@ router.get('/quizzes', function(req, res, next) {
 });
 
 
-*/
+
 
 module.exports = router;
